@@ -1,0 +1,56 @@
+/* if trash got out of view, if material, look to which letter you belong to and go to this position
+
+OPEN FOR MAINTENANCE (18 letters)(ca. 200 fragments)
+- Für A müssen vier Positionen festgelegt werden
+
+/*WHERE IS THE ORIGINAL MATERIAL?*/
+
+.position1 {
+    top: 300px;
+    left:100px;
+}
+
+.position2 {
+    top: 300px;
+    left: 400px;
+}
+
+.position3 {
+    top: 250px;
+    left: 0px;
+}
+
+/*WHAT HAPPENS WITH TRASH?*/
+
+@keyframes trash {
+    to {top: -1000px; left: -1000px;}
+  }
+
+.trash {
+    animation-name: trash;
+}
+
+/*BUILD A*/
+
+@keyframes positionA {
+    to {top: 0px; left: 0;}
+  }
+
+.positionA {
+    animation-name: positionA;
+}
+
+/*Default properties for all letters*/
+.letterbox {
+    width:500px;
+    height:500px;
+    position: absolute;
+
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;  
+    animation-delay: 2s;
+    /*animation-iteration-count: infinite;*/
+    /*animation-direction: alternate-reverse;*/
+
+}
