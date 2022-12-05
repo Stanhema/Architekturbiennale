@@ -5,6 +5,10 @@ OPEN FOR MAINTENANCE (18 letters)(ca. 200 fragments)
 
 /*WHAT HAPPENS WITH TRASH?*/
 
+body {
+    background-color: #AADEF8;
+}
+
 @keyframes textblock {
     to {left: 20px;}
   }
@@ -39,6 +43,17 @@ OPEN FOR MAINTENANCE (18 letters)(ca. 200 fragments)
     left: 40px;
 }
 
+.position4 {
+    top: 500px;
+    left: 40px;
+}
+
+.position4 {
+    top: 500px;
+    left: 40px;
+}
+
+
 /*WHAT HAPPENS WITH TRASH?*/
 
 @keyframes goSomewhere {
@@ -62,11 +77,16 @@ OPEN FOR MAINTENANCE (18 letters)(ca. 200 fragments)
 /*Default properties for all letters*/
 
 .letter {
-    height: 280px;
+    height: 250px;
     margin-bottom: -70px;
-    
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
 }
+
+@media only screen and (min-width: 1440px) {
+    .letter {
+        height: 350px;
+    }
+  }
 
 .animation {
     position: absolute;
@@ -81,20 +101,5 @@ OPEN FOR MAINTENANCE (18 letters)(ca. 200 fragments)
 }
 
 .transparent {
-    opacity: 0.08;
+    opacity: 0;
 }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.grid-container-for {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-  .grid-item {
-    position: relative;
-    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
-  }
