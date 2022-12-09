@@ -1,12 +1,45 @@
-/* if trash got out of view, if material, look to which letter you belong to and go to this position
-
-OPEN FOR MAINTENANCE (18 letters)(ca. 200 fragments)
-- Für A müssen vier Positionen festgelegt werden
-
-/*WHAT HAPPENS WITH TRASH?*/
-
 body {
     background-color: #AADEF8;
+    height: 2500px; 
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'SHBDA';
+    src: url('fonts/SHBDA23V1.woff');
+   }
+
+a {
+    font-family: 'SHBDA', Arial, sans-serif;
+}
+
+.headline {
+    font-size: 25px;
+    margin-left: -2px;
+}
+
+.ss05 {
+    font-feature-settings: 'ss00';
+}
+
+.ss00 {
+    font-feature-settings: 'ss00';
+}
+
+.ss01 {
+    font-feature-settings: 'ss01';
+}
+
+.ss02 {
+    font-feature-settings: 'ss02';
+}
+
+.ss03 {
+    font-feature-settings: 'ss03';
+}
+
+.ss04 {
+    font-feature-settings: 'ss04';
 }
 
 @keyframes textblock {
@@ -15,7 +48,7 @@ body {
 
 .textblock {
     animation-name: textblock;
-    animation-duration: 4s;
+    animation-duration: 4s; 
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;  
     animation-delay: 2s;
@@ -77,12 +110,24 @@ body {
 /*Default properties for all letters*/
 
 .letter {
-    height: 250px;
+    height: 200px;
     margin-bottom: -70px;
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
 }
 
+@media only screen and (min-width: 1024px) {
+    .letter {
+        height: 250px;
+    }
+  }
+
 @media only screen and (min-width: 1440px) {
+    .letter {
+        height: 280px;
+    }
+  }
+  
+@media only screen and (min-width: 1800px) {
     .letter {
         height: 350px;
     }
