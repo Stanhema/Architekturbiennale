@@ -1,0 +1,213 @@
+.modal-dialog .form-control { width: 100% !important; }
+
+
+tr.no-border td {border-top: 0 !important;}
+
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: blue
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#progressbar li.step:before {
+    content: var(--buying-step);
+}
+
+#progressbar li:before {
+
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: blue
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: blue
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+img.img-pixel {
+    width: 1px;
+    height: 1px;
+}
+
+
+
+.modal-ticket .modal-dialog,
+.modal-ticket .modal-content {
+    /* 80% of window height */
+    height: 90%;
+}
+
+.modal-ticket .modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+
+
+.modal-ticket-timeslot {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+/*cookies*/
+/*xxx*/
+/* line 824, ../sass/screen.scss */
+.static-page-content.cookie {
+  background-color: yellow;
+}
+/* line 827, ../sass/screen.scss */
+.static-page-content.cookie .alert-warning {
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
+  font-family: 'Times New Roman';
+  font-size: 2.05rem;
+  line-height: 2.3rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  /* line 827, ../sass/screen.scss */
+  .static-page-content.cookie .alert-warning {
+    font: 2.5rem/3.1rem Times, serif;
+  }
+}
+/* line 834, ../sass/screen.scss */
+.static-page-content.cookie .close {
+  display: block;
+  width: 100%;
+  opacity: 1;
+}
+/* line 839, ../sass/screen.scss */
+.static-page-content.cookie .close span {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  border: 1px solid black;
+  color: black;
+  padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+  transition: padding 0.3s ease;
+}
+@media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  /* line 839, ../sass/screen.scss */
+  .static-page-content.cookie .close span {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+}
+/* line 845, ../sass/screen.scss */
+.static-page-content.cookie .close span:hover {
+  padding: 0.5rem 1rem 0.4rem 1rem;
+}
+
+
+.btn-user {
+    background-color: #00ea2c !important;
+    border-radius: 20px;
+}
+.btn-user-border {
+    border-color: #00ea2c !important;
+}
+
+
+/**
+ * cookie
+ */
+div.cookieconsent-optout {
+    position:relative;
+}
+div.cookieconsent-optout .message {
+    background-color:#000;
+    color:#fff;
+    padding:10px;
+    text-align:center;
+    position:absolute;
+    bottom:50%;
+    width:90%;
+    left:5%;
+    font-size:120%;
+}
+
+div.cookieconsent-optout .message a,
+div.cookieconsent-optout .message a:hover {
+    color:#fff !important;
+}
+
+#cconsent-bar {
+    text-align: center !important;
+}
+
+#cconsent-bar .ccb__left {
+    margin: 15px auto !important;
+}
+
+#cconsent-modal .ccm__footer button#ccm__footer__consent-modal-submit {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.ccb__right { width: 100%; }
+.ccb__right a.ccb__edit:hover { color: #000 !important;}

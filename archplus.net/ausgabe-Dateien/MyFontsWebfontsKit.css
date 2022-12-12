@@ -1,0 +1,35 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3415584, 2017-07-03T04:35:04-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed ../fonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: TimesTenLT-Roman by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/times-ten/roman/
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: TimesTenLT-Italic by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/times-ten/italic/
+ * Licensed pageviews: 500,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3415584
+ * ../fonts copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted (c) 1988, 1990, 1993, 1995, 2003 Linotype Library GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype Librar
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/341e20");
+
+  
+@font-face {font-family: 'TimesTenLT-Roman';src: url('../fonts/341E20_0_0.eot');src: url('../fonts/341E20_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/341E20_0_0.woff2') format('woff2'),url('../fonts/341E20_0_0.woff') format('woff'),url('../fonts/341E20_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'TimesTenLT-Italic';src: url('../fonts/341E20_1_0.eot');src: url('../fonts/341E20_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/341E20_1_0.woff2') format('woff2'),url('../fonts/341E20_1_0.woff') format('woff'),url('../fonts/341E20_1_0.ttf') format('truetype');}
+ 
