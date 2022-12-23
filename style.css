@@ -2,27 +2,15 @@ body {
     background-color: #AADEF8;
     height: 2500px; 
     overflow-x: hidden;
+    margin: 0px;
 }
 
 @font-face {
     font-family: 'SHBDA';
-    src: url('fonts/SHBDA23V1.woff');
+    src: url('fonts/SH-Maintenance.woff');
    }
 
-a {
-    font-family: 'SHBDA', Arial, sans-serif;
-}
-
-.headline {
-    font-size: 25px;
-    margin-left: -2px;
-}
-
-.ss05 {
-    font-feature-settings: 'ss00';
-}
-
-.ss00 {
+.ss00 .ss05 .ss06 .ss07 .ss08 .ss09 .ss010 .ss011 .ss012 .ss013 .ss014 .ss015 .ss016 {
     font-feature-settings: 'ss00';
 }
 
@@ -42,109 +30,98 @@ a {
     font-feature-settings: 'ss04';
 }
 
+a {
+    font-family: 'SHBDA', Arial, sans-serif;
+}
+
+.typeAlternates {
+    margin-left: -2.5px;
+}
+
+.headline {
+    font-size: 25px;
+    margin-left: -2px;
+}
+
 @keyframes textblock {
-    to {left: 20px;}
+    to {left: 15px;}
   }
 
 .textblock {
     animation-name: textblock;
-    animation-duration: 4s; 
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;  
-    animation-delay: 2s;
 }
 
-/*WHERE IS THE ORIGINAL MATERIAL?*/
-
-.position1 {
-    top: 80px;
-    left:80px;
-}
-
-.position2 {
-    top: 300px;
-    left: 400px;
-}
-
-.position3 {
-    top: 250px;
-    left: 0px;
-}
-
-.position4 {
-    top: 500px;
-    left: 40px;
-}
-
-.position4 {
-    top: 500px;
-    left: 40px;
-}
-
-.position4 {
-    top: 500px;
-    left: 40px;
-}
-
-
-/*WHAT HAPPENS WITH TRASH?*/
-
-@keyframes goSomewhere {
-    to {top: -1000px; left: -1000px;}
-  }
-
-.goSomewhere {
-    animation-name: goSomewhere;
-}
-
-/*GO TO ORIGIN*/
-
-@keyframes goToOrigin {
-    to {top: 0px; left: 0px;}
-  }
-
-.goToOrigin {
-    animation-name: goToOrigin;
-}
+.animation-textblock {
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(.48,0,0,1);
+    animation-fill-mode: forwards; 
+    animation-delay: 0.2s;
+} 
 
 /*Default properties for all letters*/
+:root {
+    --letter-height: 250px;
+}
+
+.fragmentContainer {
+    display: flex; 
+    justify-content: flex-start; 
+    flex-wrap: wrap; 
+    height: 280px; 
+    margin-top: -30px;
+}
 
 .letter {
-    height: 200px;
-    margin-bottom: -70px;
+    height: var(--letter-height);
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
 }
 
-@media only screen and (min-width: 1024px) {
-    .letter {
-        height: 250px;
-    }
-  }
+.fragmentsEn {
+    height: var(--letter-height);
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+}
 
-@media only screen and (min-width: 1440px) {
-    .letter {
-        height: 280px;
-    }
-  }
-  
-@media only screen and (min-width: 1800px) {
-    .letter {
-        height: 350px;
-    }
-  }
-
-.animation {
+.fragmentsDe {
+    height: var(--letter-height);
     position: absolute;
-
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;  
-    animation-delay: 2s;
-
-    /*animation-iteration-count: infinite;*/
-    /*animation-direction: alternate-reverse;*/
+    top: 0px;
+    left: 0px;
 }
 
 .transparent {
     opacity: 0;
+}
+
+/* Bootstrap oriented Responsive design */
+
+@media (min-width: 576px) { 
+    :root {
+        --letter-height: 250px;
+    }
+ }
+
+@media (min-width: 768px) { 
+    :root {
+        --letter-height: 260px;
+    }
+ }
+
+@media (min-width: 992px) { 
+    :root {
+        --letter-height: 270px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    :root {
+        --letter-height: 280px;
+    }
+}
+
+@media (min-width: 1400px) { 
+    :root {
+        --letter-height: 340px;
+    }
 }
