@@ -1,3 +1,16 @@
+window.onresize = function(){ 
+    location.reload(); 
+
+
+    /*var newLetterHeight = reportLetterHeight();
+    console.log("newLetterHeight: " + newLetterHeight);
+
+    const elementos = document.querySelectorAll('.scaleDownDe');
+    for (let element of elementos) {
+        element.style.height =  newLetterHeight + "px";
+    }*/
+}
+
 function generateRandom(min, max) {
 
     let difference = max - min;
@@ -13,8 +26,23 @@ function generateRandom(min, max) {
 
 /*FRAGMENT ANIMATION*/
 
+var letterHeight;
 
-var letterHeight = getComputedStyle(document.body).getPropertyValue('--letter-height');
+function reportLetterHeight() {
+    console.log('reportLetterHeight called');
+    const element = document.querySelector(':root');
+    const computedStyles = window.getComputedStyle(element);
+    const cssVariableValue = computedStyles.getPropertyValue('--letter-height');
+
+    letterHeight = parseInt(cssVariableValue.replace("px", ""));
+    console.log("letterHeight1: " + letterHeight);
+    return letterHeight;   
+};
+
+reportLetterHeight();
+console.log("letterHeight2: " + letterHeight);
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+console.log("vw: " + vw);
 
 function randomCss() {
 
@@ -29,11 +57,6 @@ function randomCss() {
 
         tl.fromTo(".move0"+[i], {y: (generateRandom(0, 300)), x: (generateRandom(0, 300)), rotation: (generateRandom(-360, 360))}, {y: 0, x: 0, rotation: 0, duration: 5, ease: "smooth"});
         tl.to(".move0"+[i], {y: (generateRandom(900, 1000))*Math.ceil(generateRandom(-1, 1)), x: (generateRandom(900, 1000))*Math.ceil(generateRandom(-1, 1)),  rotation: (generateRandom(-360, 360)),  duration: 10, ease: "smooth", delay: 0.5});
-
-        let tl2 = gsap.timeline({})
-
-        tl2.to(".scaleDownEn", { duration: 5, ease: "smooth", height: letterHeight});
-        tl2.to(".scaleDownEn", { duration: 2.5, ease: "smooth", height: 0, delay: 1 });
     }
 
     const fragmentsDe = document.querySelectorAll(".fragmentsDe");
@@ -45,12 +68,14 @@ function randomCss() {
 
         tl.fromTo(".moves0"+[i], {y: (generateRandom(0,300)), x: (generateRandom(0, 300)), rotation: (generateRandom(-360, 360))}, {y: (generateRandom(900,  1000))*Math.ceil(generateRandom(-1, 1)), x: (generateRandom(900, 1000))*Math.ceil(generateRandom(-1, 1)), rotation: (generateRandom(-360, 360)), duration: 5, ease: "smooth"});
         tl.to(".moves0"+[i], {y: 0, x: 0, rotation: 0, duration: 5, ease: "smooth", delay: 0.5 });
-
-        let tl2 = gsap.timeline({})
-
-        tl2.fromTo(".scaleDownDe", {height: 0}, {height: 0, duration: 5, ease: "smooth"});
-        tl2.to(".scaleDownDe", { duration: 2.5, ease: "smooth", height: letterHeight, delay: 1 });
     }
+
+    let tl2 = gsap.timeline({})
+    tl2.to(".scaleDownEn", { duration: 2.5, ease: "smooth", height: 0, delay: 6 });
+
+    let tl3 = gsap.timeline({})
+    tl3.from(".scaleDownDe", { duration: 2.5, ease: "smooth", height: 0, delay: 6 });
+   
 }
 
 window.onload = function() {
@@ -68,7 +93,7 @@ function changeCss() {
     
     if (window.pageYOffset > breakpoint) {
        
-        gsap.to(".navvi", {top: 10, duration: 0.2, ease: "smooth"});
+        gsap.to(".scrollHead", {top: 10, duration: 0.2, ease: "smooth"});
         const elements = document.querySelectorAll(".typeAlternates");
         
         for (const element of elements) {

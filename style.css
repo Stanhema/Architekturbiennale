@@ -34,6 +34,15 @@ a {
     font-family: 'SHBDA', Arial, sans-serif;
 }
 
+.scrollHead {
+    position: fixed;  
+    top: -500px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    z-index: 20;
+}
+
 .typeAlternates {
     margin-left: -2.5px;
 }
@@ -60,20 +69,23 @@ a {
 
 /*Default properties for all letters*/
 :root {
-    --letter-height: 250px;
+    --letter-height: 220px;
 }
 
 .fragmentContainer {
     display: flex; 
     justify-content: flex-start; 
     flex-wrap: wrap; 
-    height: 280px; 
-    margin-top: -30px;
+    min-height: var(--letter-height); 
+    /*margin-top: -30px;*/
 }
 
 .letter {
     height: var(--letter-height);
-    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    /*margin-bottom: -70px;*/
+    margin-right: -4px;
+    margin-bottom: -70px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 .fragmentsEn {
@@ -90,11 +102,7 @@ a {
     left: 0px;
 }
 
-.transparent {
-    opacity: 0;
-}
-
-/* Bootstrap oriented Responsive design */
+/* Bootstrap oriented Responsive design*/
 
 @media (min-width: 576px) { 
     :root {
@@ -124,4 +132,8 @@ a {
     :root {
         --letter-height: 340px;
     }
+}
+
+.transparent {
+    opacity: 0.2;
 }
