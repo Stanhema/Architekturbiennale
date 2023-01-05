@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'SH-Maintenance';
+    src: url('fonts/SH-Maintenance.woff');
+   }
+
+.ss00 .ss05 .ss06 .ss07 .ss08 .ss09 .ss010 .ss011 .ss012 .ss013 .ss014 .ss015 .ss016 {
+    font-feature-settings: 'ss00';
+}
+
+.ss01 {
+    font-feature-settings: 'ss01';
+}
+
+.ss02 {
+    font-feature-settings: 'ss02';
+}
+
+.ss03 {
+    font-feature-settings: 'ss03';
+}
+
+.ss04 {
+    font-feature-settings: 'ss04';
+}
+
+a {
+    font-family: 'SH-Maintenance', Arial, sans-serif;
+}
+
+.scrollHead {
+    position: fixed;  
+    top: -800px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    z-index: 20;
+    letter-spacing: 0.2em;
+}
+
+.typeAlternates {
+    margin-left: -2.5px;
+}
+
+.headline {
+    font-size: 25px;
+    margin-left: -2px;
+}
+
+@keyframes textblock {
+    to {left: 15px;}
+  }
+
+.textblock {
+    animation-name: textblock;
+}
+
+.animation-textblock {
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(.48,0,0,1);
+    animation-fill-mode: forwards; 
+    animation-delay: 0.2s;
+} 
