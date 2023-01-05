@@ -3,25 +3,25 @@
     src: url('fonts/SH-Maintenance.woff');
    }
 
-.ss00 .ss05 .ss06 .ss07 .ss08 .ss09 .ss010 .ss011 .ss012 .ss013 .ss014 .ss015 .ss016 {
-    font-feature-settings: 'ss00';
-}
-
-.ss01 {
-    font-feature-settings: 'ss01';
-}
-
-.ss02 {
-    font-feature-settings: 'ss02';
-}
-
-.ss03 {
-    font-feature-settings: 'ss03';
-}
-
-.ss04 {
-    font-feature-settings: 'ss04';
-}
+.ss00 {font-feature-settings: 'ss00';}
+.ss01 {font-feature-settings: 'ss01';}
+.ss02 {font-feature-settings: 'ss02';}
+.ss03 {font-feature-settings: 'ss03';}
+.ss04 {font-feature-settings: 'ss04';}
+.ss05 {font-feature-settings: 'ss05';}
+.ss06 {font-feature-settings: 'ss06';}
+.ss07 {font-feature-settings: 'ss07';}
+.ss08 {font-feature-settings: 'ss08';}
+.ss09 {font-feature-settings: 'ss09';}
+.ss010 {font-feature-settings: 'ss10';}
+.ss011 {font-feature-settings: 'ss11';}
+.ss012 {font-feature-settings: 'ss12';}
+.ss013 {font-feature-settings: 'ss13';}
+.ss014 {font-feature-settings: 'ss14';}
+.ss015 {font-feature-settings: 'ss15';}
+.ss016 {font-feature-settings: 'ss16';}
+.ss017 {font-feature-settings: 'ss17';}
+.ss018 {font-feature-settings: 'ss18';}
 
 a {
     font-family: 'SH-Maintenance', Arial, sans-serif;
@@ -29,7 +29,7 @@ a {
 
 .scrollHead {
     position: fixed;  
-    top: -800px; 
+    top: -100px; 
     width: 100%; 
     display: flex; 
     justify-content: center; 

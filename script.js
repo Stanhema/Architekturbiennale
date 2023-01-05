@@ -1,14 +1,5 @@
 window.onresize = function(){ 
     location.reload(); 
-
-
-    /*var newLetterHeight = reportLetterHeight();
-    console.log("newLetterHeight: " + newLetterHeight);
-
-    const elementos = document.querySelectorAll('.scaleDownDe');
-    for (let element of elementos) {
-        element.style.height =  newLetterHeight + "px";
-    }*/
 }
 
 function generateRandom(min, max) {
@@ -87,29 +78,65 @@ window.onload = function() {
 window.addEventListener("scroll", changeCss);
 
 var styless = ["ss00", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09"];
-var breakpoint = 00;
+var breakpoint = 800;
 
 function changeCss() {
     
     if (window.pageYOffset > breakpoint) {
-       
         gsap.to(".scrollHead", {top: 10, duration: 0.2, ease: "smooth"});
-        const elements = document.querySelectorAll(".typeAlternates");
-        
-        for (const element of elements) {
-            let rand1 = (generateRandom(0, 10));
-            element.classList.add("ss0" + (rand1));
-
-            let rand2 = (generateRandom(0, 30));
-            element.classList.remove("ss0" + (rand2));      
-        }
+    } else {
+        gsap.to(".scrollHead", {top: -100, duration: 0.2, ease: "smooth"});
     }
+
+    
+        const elements1 = document.querySelectorAll(".typeAlternates-0-9");
+        
+        for (const element of elements1) {
+            let rand = (generateRandom(0, 9));
+            element.classList =("typeAlternates-0-9 ss0" + (rand));
+        }
+
+        const elements2 = document.querySelectorAll(".typeAlternates-0-5");
+        
+        for (const element of elements2) {
+            let rand = (generateRandom(0, 5));
+            element.classList =("typeAlternates-0-5 ss0" + (rand));
+        }
+
+        const elements3 = document.querySelectorAll(".typeAlternates-6-12");
+        
+        for (const element of elements3) {
+            let rand = (generateRandom(6, 12));
+            element.classList =("typeAlternates-6-12 ss0" + (rand));
+        }
+
+        const elements4 = document.querySelectorAll(".typeAlternates-11-18");
+        
+        for (const element of elements4) {
+            let rand = (generateRandom(11, 18));
+            element.classList =("typeAlternates-11-18 ss0" + (rand));
+        }
 }
 
-//Console Log Scroll Position
-window.onscroll=function(){
-    console.log( 
-        'top: '  + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
-        'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
-    );
-}
+/* 
+
+O 	= ss.00–ss.09   1
+P 	= ss.00–ss.09	1	
+E1 	= ss.00–ss.05   2	
+N1	= ss.00–ss.05   2		
+F	= ss.00–ss.09   1		
+O	= ss.00–ss.09   1		
+R	= ss.00–ss.05   2
+M	=ss.00–ss.09    1		
+A1	=ss.00–ss.06	2	
+I.      = ss.00
+N2	= ss.06–ss.12	3	
+T	= ss.00–ss.06	2	
+E2	= ss.06–ss.10	3
+N3	= ss.13–ss.18   4
+A2	= ss.07–ss.12	3	
+N4	= ss.13–ss.18   4
+C	= ss.00–ss.04	2	
+E3	= ss.11–ss.18   4
+
+*/
