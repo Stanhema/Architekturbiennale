@@ -37,7 +37,7 @@ console.log("vw: " + vw);
 
 function randomCss() {
 
-    CustomEase.create("smooth", "M0,0 C0.272,0 0.301,0.103 0.5,0.5 0.7,0.9 0.744,1 1,1 ");
+    CustomEase.create("smooth", "M0,0,C0.238,0,0.254,0.258,0.3,0.5,0.364,0.8,0.44,0.857,0.5,0.9,0.622,0.988,0.698,1,1,1");
 
     const fragmentsEn = document.querySelectorAll(".fragmentsEn");
 
@@ -80,6 +80,10 @@ window.addEventListener("scroll", changeCss);
 var styless = ["ss00", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09"];
 var breakpoint = 800;
 
+let prevScrollPos = window.scrollY;
+let scrollCounter = 0;
+let randomizerSpeed = 30;
+
 function changeCss() {
     
     if (window.pageYOffset > breakpoint) {
@@ -88,34 +92,41 @@ function changeCss() {
         gsap.to(".scrollHead", {top: -100, duration: 0.2, ease: "smooth"});
     }
 
-    
-        const elements1 = document.querySelectorAll(".typeAlternates-0-9");
+    window.onscroll = function() {
+        scrollCounter += Math.abs(window.pageYOffset - prevScrollPos);
+        prevScrollPos = window.pageYOffset;
+            if (scrollCounter >= randomizerSpeed) {
+            scrollCounter = 0;
         
-        for (const element of elements1) {
-            let rand = (generateRandom(0, 9));
-            element.classList =("typeAlternates-0-9 ss0" + (rand));
-        }
+            const elements1 = document.querySelectorAll(".typeAlternates-0-9");
+            
+            for (const element of elements1) {
+                let rand = (generateRandom(0, 9));
+                element.classList =("typeAlternates-0-9 ss0" + (rand));
+            }
 
-        const elements2 = document.querySelectorAll(".typeAlternates-0-5");
-        
-        for (const element of elements2) {
-            let rand = (generateRandom(0, 5));
-            element.classList =("typeAlternates-0-5 ss0" + (rand));
-        }
+            const elements2 = document.querySelectorAll(".typeAlternates-0-5");
+            
+            for (const element of elements2) {
+                let rand = (generateRandom(0, 5));
+                element.classList =("typeAlternates-0-5 ss0" + (rand));
+            }
 
-        const elements3 = document.querySelectorAll(".typeAlternates-6-12");
-        
-        for (const element of elements3) {
-            let rand = (generateRandom(6, 12));
-            element.classList =("typeAlternates-6-12 ss0" + (rand));
-        }
+            const elements3 = document.querySelectorAll(".typeAlternates-6-12");
+            
+            for (const element of elements3) {
+                let rand = (generateRandom(6, 12));
+                element.classList =("typeAlternates-6-12 ss0" + (rand));
+            }
 
-        const elements4 = document.querySelectorAll(".typeAlternates-11-18");
-        
-        for (const element of elements4) {
-            let rand = (generateRandom(11, 18));
-            element.classList =("typeAlternates-11-18 ss0" + (rand));
+            const elements4 = document.querySelectorAll(".typeAlternates-11-18");
+            
+            for (const element of elements4) {
+                let rand = (generateRandom(11, 18));
+                element.classList =("typeAlternates-11-18 ss0" + (rand));
+            }
         }
+    }
 }
 
 /* 
