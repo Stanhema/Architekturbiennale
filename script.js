@@ -15,7 +15,7 @@ function generateRandom(min, max) {
     }
 }
 
-/*FRAGMENT ANIMATION*/
+/*HEADER ANIMATION*/
 
 var letterHeight;
 
@@ -73,7 +73,7 @@ window.onload = function() {
     randomCss();
 };
 
-/*SCROLL Nav/Header ANIMATION*/
+/*SCROLL ANIMATION*/
 
 window.addEventListener("scroll", changeCss);
 
@@ -128,26 +128,3 @@ function changeCss() {
         }
     }
 }
-
-/* 
-
-O 	= ss.00–ss.09   1
-P 	= ss.00–ss.09	1	
-E1 	= ss.00–ss.05   2	
-N1	= ss.00–ss.05   2		
-F	= ss.00–ss.09   1		
-O	= ss.00–ss.09   1		
-R	= ss.00–ss.05   2
-M	=ss.00–ss.09    1		
-A1	=ss.00–ss.06	2	
-I.      = ss.00
-N2	= ss.06–ss.12	3	
-T	= ss.00–ss.06	2	
-E2	= ss.06–ss.10	3
-N3	= ss.13–ss.18   4
-A2	= ss.07–ss.12	3	
-N4	= ss.13–ss.18   4
-C	= ss.00–ss.04	2	
-E3	= ss.11–ss.18   4
-
-*/

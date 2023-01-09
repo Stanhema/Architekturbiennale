@@ -9,7 +9,7 @@ body {
 /*Default properties for all letters*/
 :root {
     --letter-height: 120px;
-    --letter-margin-bottom: calc(var(--letter-height)/-3);
+    --letter-margin-bottom: calc(var(--letter-height)/-2.7);
 }
 
 .letterContainer {
@@ -37,6 +37,7 @@ body {
     height: var(--letter-height);
     /*border: 1px solid rgba(0, 0, 0, 0.8); */ /*helper*/
     margin-bottom: var(--letter-margin-bottom);
+    margin-right: 0px;
 }
 
 .transparent {
@@ -135,6 +136,6 @@ body {
 
 @media (min-width: 1400px) { 
     :root {
-        --letter-height: 330px;
+        --letter-height: 300px;
     }
 }
